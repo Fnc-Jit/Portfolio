@@ -2,7 +2,7 @@
 
 A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and JavaScript.
 
-🔗 **Live:** [portfolio.vercel.app](https://portfolio.vercel.app)
+🔗 **Live:** [portfolio.vercel.app] portfolio-two-neon-22.vercel.app
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen)
 
