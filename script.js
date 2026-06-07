@@ -1,11 +1,25 @@
 /* === JITRAJ ESH PORTFOLIO — JS === */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
     initParticles();
     initTiles();
     initModals();
     fetchGitHub();
 });
+
+/* ---- Theme Toggle ---- */
+function initTheme() {
+    const saved = localStorage.getItem('theme');
+    // Apply saved preference, or default to dark
+    if (saved === 'light') document.body.classList.add('light');
+
+    const btn = document.getElementById('theme-toggle');
+    btn?.addEventListener('click', () => {
+        const isLight = document.body.classList.toggle('light');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+}
 
 /* ---- Particle Background ---- */
 function initParticles() {

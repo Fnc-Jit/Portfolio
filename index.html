@@ -22,6 +22,19 @@
   <nav class="navbar" id="navbar">
     <a href="#" class="nav-logo"><span class="br">&lt;</span>JE<span class="br">/&gt;</span></a>
     <div class="nav-links">
+      <button id="theme-toggle" class="nav-icon theme-toggle-btn" title="Toggle light/dark mode" aria-label="Toggle theme">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+      </button>
       <a href="https://github.com/Fnc-Jit" target="_blank" class="nav-icon" title="GitHub">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -40,10 +53,9 @@
   <!-- Hero -->
   <header class="hero">
     <div class="hero-content">
-      <div class="hero-badge">Cybersecurity &amp; Computer Science</div>
+      <div class="hero-badge">Researcher &bull; Builder &bull; Cybersecurity</div>
       <h1 class="hero-title">Hi, I'm <span class="gradient-text">Jitraj Esh</span></h1>
-      <p class="hero-sub">Cybersecurity student passionate about AI, malware analysis, and building secure software
-        solutions. Based in Bengaluru, India.</p>
+      <p class="hero-sub">Building AI systems, cybersecurity tools, and research-driven software that solve real-world problems at scale.</p>
       <div class="hero-btns">
         <a href="#tiles" class="btn btn-primary">Explore My Work</a>
         <a href="https://github.com/Fnc-Jit" target="_blank" class="btn btn-outline">
@@ -53,6 +65,15 @@
           </svg>
           GitHub Profile
         </a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat"><span class="hero-stat-n">12+</span> Projects</span>
+        <span class="hero-stat-sep">•</span>
+        <span class="hero-stat"><span class="hero-stat-n">5</span> Hackathons</span>
+        <span class="hero-stat-sep">•</span>
+        <span class="hero-stat"><span class="hero-stat-n">2</span> Research Papers</span>
+        <span class="hero-stat-sep">•</span>
+        <span class="hero-stat hero-stat-highlight">ICCI 2026 Published</span>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -85,7 +106,7 @@
             <polyline points="8 6 2 12 8 18" />
           </svg></div>
         <h3>Projects</h3>
-        <p class="tile-desc">7 projects built with passion</p>
+        <p class="tile-desc">12+ projects built with passion</p>
       </div>
       <div class="tile" data-modal="modal-certs" style="animation-delay:.3s">
         <div class="tile-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -95,7 +116,7 @@
             <line x1="12" y1="17" x2="12" y2="21" />
           </svg></div>
         <h3>Certifications</h3>
-        <p class="tile-desc">5 industry credentials</p>
+        <p class="tile-desc">6+ industry credentials</p>
       </div>
       <div class="tile" data-modal="modal-research" style="animation-delay:.45s">
         <div class="tile-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -124,7 +145,16 @@
         <h3>Experience</h3>
         <p class="tile-desc">Professional internships</p>
       </div>
-      <div class="tile" data-modal="modal-contact" style="animation-delay:.9s">
+      <div class="tile" data-modal="modal-blogs" style="animation-delay:.9s">
+        <div class="tile-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg></div>
+        <h3>Technical Blogs</h3>
+        <p class="tile-desc">Engineering deep-dives &amp; research articles</p>
+      </div>
+      <div class="tile" data-modal="modal-contact" style="animation-delay:1.05s">
         <div class="tile-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -166,25 +196,31 @@
       </div>
       <div class="modal-body">
         <p class="about-hi">Hey, I'm <strong>Jitraj Esh</strong> 👋</p>
-        <p>I'm a Cybersecurity and Computer Science student based in <strong>Bengaluru, India</strong>. I'm passionate
-          about AI, malware analysis, and building software that makes a real impact.</p>
-        <p>From designing machine learning–based threat detection systems to building web platforms and mobile apps, I
-          love solving complex problems with elegant code. I'm constantly exploring the intersection of
-          <strong>cybersecurity</strong>, <strong>artificial intelligence</strong>, and <strong>modern software
-            development</strong>.
+        <p>I'm a <strong>BCA (Cybersecurity)</strong> student, researcher, and builder based in <strong>Bengaluru,
+            India</strong>. My work spans artificial intelligence, cybersecurity, machine learning, and large-scale
+          software systems, with a strong focus on solving real-world problems through research and engineering.</p>
+        <p>I've built projects ranging from intrusion detection systems, LLM oversight platforms, reinforcement learning
+          environments, and malware analysis tools to financial risk engines and social-impact applications. I enjoy
+          turning complex ideas into practical, scalable solutions that create measurable impact.</p>
+        <p>Beyond development, I'm actively involved in research — author of a <strong>published paper presented at ICCI
+            2026</strong> and currently working on a second manuscript exploring associative memory systems and
+          precision control in AI. My interests include <strong>AI safety</strong>, <strong>machine learning
+            research</strong>, <strong>cybersecurity</strong>, <strong>distributed systems</strong>, and
+          <strong>intelligent agents</strong>.
         </p>
-        <p>When I'm not coding, you'll find me participating in hackathons, researching brain-computer interfaces, or
-          contributing to open-source projects.</p>
+        <p>When I'm not coding or researching, you'll find me participating in hackathons, contributing to open-source
+          projects, exploring emerging technologies, and continuously learning through hands-on experimentation.</p>
         <div class="tags">
-          <span class="tag">Cybersecurity</span><span class="tag">Machine Learning</span><span class="tag">Malware
-            Analysis</span><span class="tag">Web Development</span><span class="tag">Mobile Apps</span><span
-            class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">React Native</span>
+          <span class="tag">Cybersecurity</span><span class="tag">Machine Learning</span><span class="tag">Artificial
+            Intelligence</span><span class="tag">AI Safety</span><span class="tag">Research</span><span
+            class="tag">Distributed Systems</span><span class="tag">Backend Engineering</span><span class="tag">Open
+            Source</span>
         </div>
         <div class="stat-grid">
-          <div class="stat"><span class="stat-n">7+</span><span class="stat-l">Projects Built</span></div>
-          <div class="stat"><span class="stat-n">3</span><span class="stat-l">Hackathons</span></div>
-          <div class="stat"><span class="stat-n">5</span><span class="stat-l">Certifications</span></div>
-          <div class="stat"><span class="stat-n">1</span><span class="stat-l">Research Paper</span></div>
+          <div class="stat"><span class="stat-n">12+</span><span class="stat-l">Projects Built</span></div>
+          <div class="stat"><span class="stat-n">5</span><span class="stat-l">Hackathons</span></div>
+          <div class="stat"><span class="stat-n">2</span><span class="stat-l">Research Papers</span></div>
+          <div class="stat"><span class="stat-n">6+</span><span class="stat-l">Certifications</span></div>
         </div>
       </div>
     </div>
@@ -205,6 +241,83 @@
       </div>
       <div class="modal-body">
         <div class="proj-grid">
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-fin">Fintech</span><span class="ptag ptag-back">Backend</span>
+            </div>
+            <h3>RiskEngine-Java</h3>
+            <p>Real-time financial risk monitoring engine with Kafka event streaming, anomaly detection, and
+              stress-testing for simulated market scenarios.</p>
+            <div class="proj-stack"><span>Java 21</span><span>Spring Boot</span><span>Kafka</span><span>ONNX
+                Runtime</span><span>TimescaleDB</span><span>Docker</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/Fnc-Jit/RiskEngine-Java" target="_blank" class="btn btn-sm">GitHub</a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-sec">Security</span><span class="ptag ptag-ml">ML</span></div>
+            <h3>God's Eye SIEM Platform</h3>
+            <p>Enterprise-scale intrusion detection platform using ML ensembles, behavioral analytics, and MITRE
+              ATT&amp;CK-based threat reconstruction.</p>
+            <div class="proj-stack">
+              <span>Rust</span><span>Kafka</span><span>ClickHouse</span><span>TimescaleDB</span><span>XGBoost</span><span>LSTM</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Fnc-Jit/Gods-Eye" target="_blank" class="btn btn-sm">GitHub</a>
+              <a href="https://godseye-nine.vercel.app/gods_eye_agents.html" target="_blank"
+                class="btn btn-sm btn-live">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-ai">AI</span><span class="ptag ptag-res">Research</span></div>
+            <h3>MissionCtrl – LLM Fleet Overseer</h3>
+            <p>LLM oversight platform for hallucination detection, RLHF-style reward modeling, and AI safety evaluation
+              across multi-agent systems.</p>
+            <div class="proj-stack">
+              <span>PyTorch</span><span>QLoRA</span><span>FastAPI</span><span>Docker</span><span>TRL</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Fnc-Jit/MissionCtrl-AI-Oversight-System" target="_blank"
+                class="btn btn-sm">GitHub</a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-ai">AI</span><span class="ptag ptag-res">Research</span></div>
+            <h3>CloudFinOps RL Environment</h3>
+            <p>Reinforcement-learning environment that optimizes cloud costs, SLA compliance, and carbon efficiency
+              using multi-objective rewards.</p>
+            <div class="proj-stack"><span>Python</span><span>FastAPI</span><span>Reinforcement
+                Learning</span><span>Docker</span><span>Pytest</span></div>
+            <div class="proj-links">
+              <a href="https://github.com/Fnc-Jit/CloudFinOps-RL-Environment" target="_blank"
+                class="btn btn-sm">GitHub</a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-sec">Security</span><span class="ptag ptag-ml">ML</span></div>
+            <h3>Malware Threat Scoring Engine</h3>
+            <p>Explainable malware analysis system using machine learning, anomaly detection, and SHAP-based threat
+              attribution.</p>
+            <div class="proj-stack"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>SHAP</span>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Fnc-Jit/Malware-Threat-Scoring-Engine" target="_blank"
+                class="btn btn-sm">GitHub</a>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-tags"><span class="ptag ptag-res">Research</span><span class="ptag ptag-ai">AI</span></div>
+            <h3>PCAM Research</h3>
+            <p>Novel associative-memory research exploring query-conditioned precision control without retraining frozen
+              neural weights.</p>
+            <div class="proj-stack"><span>Python</span><span>NumPy</span><span>Statistical
+                Modeling</span><span>Research</span></div>
+          </div>
 
           <div class="proj-card">
             <div class="proj-tags"><span class="ptag ptag-sec">Security</span><span class="ptag ptag-ml">ML</span></div>
@@ -270,18 +383,6 @@
             <div class="proj-stack"><span>Python</span><span>pynput</span></div>
             <div class="proj-links">
               <a href="https://github.com/Fnc-Jit/Sys_mon_keylogger" target="_blank" class="btn btn-sm">GitHub</a>
-            </div>
-          </div>
-
-          <div class="proj-card">
-            <div class="proj-tags"><span class="ptag ptag-web">Web App</span><span class="ptag ptag-sec">Crypto</span>
-            </div>
-            <h3>Hasher</h3>
-            <p>Web-based hashing utility generating cryptographic hashes for security learning and demonstration.</p>
-            <div class="proj-stack"><span>JavaScript</span><span>HTML/CSS</span><span>Crypto API</span></div>
-            <div class="proj-links">
-              <a href="https://github.com/Fnc-Jit/HASHER" target="_blank" class="btn btn-sm">GitHub</a>
-              <a href="https://hasher-seven.vercel.app/" target="_blank" class="btn btn-sm btn-live">Live Demo</a>
             </div>
           </div>
 
@@ -363,38 +464,76 @@
         <h2>Research</h2>
       </div>
       <div class="modal-body">
-        <div class="research-card">
-          <div class="research-tag">Published Paper</div>
-          <h3>Invasive Brain–Computer Interfaces: Advancements, Challenges, and Societal Considerations</h3>
-          <p class="research-venue">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            Presented at International Conference on Computational Intelligence (ICCI) – 2026
-          </p>
-          <p>This research explores advancements, challenges, and societal considerations of invasive brain–computer
-            interface technologies. It examines neural interfaces, applications in medicine and computing, ethical
-            implications, and future directions.</p>
-          <div class="research-btns">
-            <a href="FinalDraft.pdf" target="_blank" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                style="margin-right:8px">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
+        <div class="research-list">
+
+          <div class="research-card">
+            <div class="research-tag">Published Paper</div>
+            <h3>Invasive Brain–Computer Interfaces: Advancements, Challenges, and Societal Considerations</h3>
+            <p class="research-venue">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
               </svg>
-              View Research Paper
-            </a>
-            <a href="certs/icci_certificate.pdf" target="_blank" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                style="margin-right:8px">
-                <rect x="2" y="3" width="20" height="14" rx="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-              </svg>
-              View ICCI Certificate
-            </a>
+              Presented at International Conference on Computational Intelligence (ICCI) – 2026
+            </p>
+            <p>This research explores advancements, challenges, and societal considerations of invasive brain–computer
+              interface technologies. It examines neural interfaces, applications in medicine and computing, ethical
+              implications, and future directions.</p>
+            <div class="research-btns">
+              <a href="FinalDraft.pdf" target="_blank" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="margin-right:8px">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+                View Research Paper
+              </a>
+              <a href="certs/icci_certificate.pdf" target="_blank" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="margin-right:8px">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                View ICCI Certificate
+              </a>
+            </div>
           </div>
+
+          <div class="research-card">
+            <div class="research-tag-teal">Manuscript in Preparation</div>
+            <h3>Query-Conditioned Precision Control for Frozen Associative Memory (PCAM)</h3>
+            <p class="research-venue">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              Independent Research · 2026
+            </p>
+            <p>Investigates whether precision in associative-memory retrieval can be controlled through query
+              conditioning without retraining frozen weights. The research introduces a novel precision-control
+              mechanism, conducts multi-seed ablation studies, and demonstrates statistically validated improvements
+              over baseline retrieval performance while proving structural limits of the benchmark.</p>
+            <ul class="research-highlights">
+              <li>Novel query-conditioned precision control framework</li>
+              <li>5-seed ablation experiments with zero regressions</li>
+              <li>Δ +0.124 improvement over baseline retrieval</li>
+              <li>Statistical validation of theoretical retrieval limits</li>
+              <li>Manuscript currently in preparation</li>
+            </ul>
+            <div class="research-btns">
+              <a href="https://drive.google.com/file/d/11HSXwVHJl55MXsoJjsR3joGn3yLZOHas/view?usp=sharing"
+                target="_blank" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  style="margin-right:8px">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+                View Research Manuscript
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -415,6 +554,33 @@
       </div>
       <div class="modal-body">
         <div class="hack-list">
+
+          <div class="hack-card-gold">
+            <div class="hack-header">
+              <div class="hack-yr">2026</div>
+              <span class="hack-achievement-gold">Top 20 / 3,200+</span>
+            </div>
+            <h3>Anvil 2026 × Scaler</h3>
+            <p>Selected among the Top 20 teams out of 3,200+ participants in Anvil 2026, a national-level AI and
+              software engineering hackathon organized by Scaler. Built and presented an innovative technical solution
+              under competitive evaluation and rapid development constraints.</p>
+            <a href="images/Jitraj_Esh__Anvil_Hackathon.png" target="_blank" class="btn btn-sm"
+              style="margin-top:.75rem">View Certificate →</a>
+          </div>
+
+          <div class="hack-card-blue">
+            <div class="hack-header">
+              <div class="hack-yr">2026</div>
+              <span class="hack-achievement-blue">Finalist / 32,000+</span>
+            </div>
+            <h3>Meta AI × Hugging Face OpenEnv Hackathon</h3>
+            <p>Reached the finalist stage among 32,000+ participants in the Meta AI × Hugging Face OpenEnv Hackathon.
+              Worked on open-source AI systems, agentic workflows, and large-scale collaborative innovation within the
+              global AI developer community.</p>
+            <a href="certs/FinalistCard_Team Arch Echo.pdf" target="_blank" class="btn btn-sm"
+              style="margin-top:.75rem">View Certificate →</a>
+          </div>
+
           <div class="hack-card">
             <div class="hack-yr">2025</div>
             <h3>Agent Hack – UiPath National Hackathon</h3>
@@ -458,20 +624,123 @@
         <h2>Experience</h2>
       </div>
       <div class="modal-body">
-        <div class="exp-wrap">
-          <div class="exp-timeline">
-            <div class="exp-dot"></div>
-            <div class="exp-line"></div>
+        <div class="exp-list">
+
+          <!-- Newest: Kristu Jayanti University -->
+          <div class="exp-wrap">
+            <div class="exp-timeline">
+              <div class="exp-dot"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-badge-amber">Volunteer</div>
+              <h3>Event Operations &amp; Data Management Volunteer</h3>
+              <p class="exp-co">Kristu Jayanti University</p>
+              <p class="exp-duration">Jul 2025 – Present</p>
+              <p>Reduced attendee onboarding wait times by 30% across 1,500+ records by automating verification
+                workflows and coordinating a 10-member volunteer team. Delivered analytics dashboards across 6 event
+                categories and streamlined certification operations for a 60-student cohort across Cisco, Oracle,
+                MongoDB, Infosys Springboard, and NASSCOM programs.</p>
+              <div class="exp-tags"><span>Data
+                  Operations</span><span>Analytics</span><span>Automation</span><span>Dashboarding</span><span>Process
+                  Improvement</span></div>
+            </div>
           </div>
-          <div class="exp-body">
-            <div class="exp-badge">Internship</div>
-            <h3>Business Development Intern</h3>
-            <p class="exp-co">Child Cancer Trust · via Internshala</p>
-            <p>Worked on fundraising campaigns, outreach, and partnership initiatives to support children battling
-              cancer. Contributed to expanding the organization's reach through strategic business development.</p>
-            <div class="exp-tags"><span>Fundraising</span><span>Outreach</span><span>Partnerships</span><span>Business
-                Development</span></div>
+
+          <!-- Child Cancer Trust -->
+          <div class="exp-wrap">
+            <div class="exp-timeline">
+              <div class="exp-dot"></div>
+              <div class="exp-line"></div>
+            </div>
+            <div class="exp-body">
+              <div class="exp-badge">Data &amp; Analytics</div>
+              <h3>Data &amp; Reporting Analyst (Volunteer)</h3>
+              <p class="exp-co">Child Cancer Trust (NGO) · Remote</p>
+              <p class="exp-duration">Jan 2025</p>
+              <p>Built Tableau dashboards tracking donor engagement across multiple social platforms, surfacing
+                campaign-performance insights that supported leadership reporting, outreach strategy, and data-driven
+                decision making.</p>
+              <div class="exp-tags"><span>Tableau</span><span>Data
+                  Analytics</span><span>Dashboarding</span><span>Reporting</span><span>Data Visualization</span></div>
+            </div>
           </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical Blogs -->
+  <div id="modal-blogs" class="modal">
+    <div class="modal-bg"></div>
+    <div class="modal-box modal-wide">
+      <button class="modal-x">&times;</button>
+      <div class="modal-head">
+        <div class="modal-ic"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg></div>
+        <h2>Technical Blogs</h2>
+      </div>
+      <div class="modal-body">
+        <div class="blog-list">
+
+          <div class="blog-card">
+            <div class="blog-cats">
+              <span class="blog-cat blog-cat-ai">AI Systems</span>
+              <span class="blog-cat blog-cat-ml">Multi-Agent AI</span>
+              <span class="blog-cat blog-cat-res">LLM Research</span>
+            </div>
+            <h3>From Chaos to Overseer: How We Built an AI That Watches Other AIs</h3>
+            <p class="blog-summary">A deep dive into MissionCtrl, a multi-agent AI oversight system designed to detect hallucination cascades and supervise fleets of collaborating AI agents. The article covers environment design, reinforcement learning with GRPO, hallucination injection strategies, reward modeling, and lessons learned while building an AI that evaluates other AIs.</p>
+            <ul class="blog-highlights">
+              <li>Built a simulated software company with five specialist AI agents</li>
+              <li>Developed an Overseer policy to detect and mitigate hallucination propagation</li>
+              <li>Trained supervision policies using GRPO and QLoRA on open-source models</li>
+              <li>Achieved reproducible evaluation through deterministic benchmarking</li>
+              <li>Explored AI safety challenges in multi-agent systems</li>
+            </ul>
+            <div class="blog-btns">
+              <a href="https://drive.google.com/file/d/1Fa3c2pvf3vt95UjxEt_EdrJBCfJvUGSi/view?usp=sharing" target="_blank" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Read Article
+              </a>
+            </div>
+          </div>
+
+          <div class="blog-card">
+            <div class="blog-cats">
+              <span class="blog-cat blog-cat-fin">FinTech</span>
+              <span class="blog-cat blog-cat-dist">Distributed Systems</span>
+              <span class="blog-cat blog-cat-ml">Machine Learning</span>
+            </div>
+            <h3>Building RiskEngine: Real-Time Financial Risk Scoring at Scale</h3>
+            <p class="blog-summary">An engineering-focused article documenting the design of RiskEngine and ScenarioForge, an event-driven financial risk scoring platform capable of processing hundreds of events per second using Kafka, ONNX Runtime, TimescaleDB, and Spring Boot.</p>
+            <ul class="blog-highlights">
+              <li>Designed an end-to-end Kafka-based streaming architecture</li>
+              <li>Integrated ONNX machine-learning inference directly into Java services</li>
+              <li>Built ScenarioForge for configurable synthetic market-event generation</li>
+              <li>Achieved 500+ events/sec throughput with sub-millisecond latency</li>
+              <li>Implemented observability, benchmarking, CI/CD, and integration testing</li>
+            </ul>
+            <div class="blog-btns">
+              <a href="https://drive.google.com/file/d/1m_-1CVeVtLpOoKLQRdntQVa94Pm48Gvo/view?usp=sharing" target="_blank" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                Read Article
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
