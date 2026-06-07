@@ -12,29 +12,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- Three.js import map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
 <body>
 
-  <canvas id="particles"></canvas>
+
 
   <!-- Navbar -->
   <nav class="navbar" id="navbar">
     <a href="#" class="nav-logo"><span class="br">&lt;</span>JE<span class="br">/&gt;</span></a>
     <div class="nav-links">
-      <button id="theme-toggle" class="nav-icon theme-toggle-btn" title="Toggle light/dark mode" aria-label="Toggle theme">
-        <!-- Sun icon (shown in dark mode) -->
-        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-        <!-- Moon icon (shown in light mode) -->
-        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
-        </svg>
-      </button>
+
       <a href="https://github.com/Fnc-Jit" target="_blank" class="nav-icon" title="GitHub">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -51,7 +50,7 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
+  <header class="hero" id="hero">
     <div class="hero-content">
       <div class="hero-badge">Researcher &bull; Builder &bull; Cybersecurity</div>
       <h1 class="hero-title">Hi, I'm <span class="gradient-text">Jitraj Esh</span></h1>
@@ -76,12 +75,15 @@
         <span class="hero-stat hero-stat-highlight">ICCI 2026 Published</span>
       </div>
     </div>
-    <div class="scroll-indicator">
+    <div class="scroll-indicator" style="z-index:2">
       <div class="scroll-mouse">
         <div class="scroll-dot"></div>
       </div>
     </div>
   </header>
+
+  <!-- Page body — solid background covers the fixed Three.js canvas -->
+  <div class="page-body">
 
   <!-- Tile Grid -->
   <main id="tiles" class="tiles-section">
@@ -804,7 +806,10 @@
     </div>
   </footer>
 
+  </div><!-- /page-body -->
+
   <script src="script.js"></script>
+  <script type="module" src="hero.js"></script>
 </body>
 
 </html>

@@ -1,81 +1,10 @@
 /* === JITRAJ ESH PORTFOLIO — JS === */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
-    initParticles();
     initTiles();
     initModals();
     fetchGitHub();
 });
-
-/* ---- Theme Toggle ---- */
-function initTheme() {
-    const saved = localStorage.getItem('theme');
-    // Apply saved preference, or default to dark
-    if (saved === 'light') document.body.classList.add('light');
-
-    const btn = document.getElementById('theme-toggle');
-    btn?.addEventListener('click', () => {
-        const isLight = document.body.classList.toggle('light');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
-}
-
-/* ---- Particle Background ---- */
-function initParticles() {
-    const c = document.getElementById('particles');
-    const ctx = c.getContext('2d');
-    let w, h, pts = [];
-    const N = 70, DIST = 120, MR = 150;
-    let mx = -9999, my = -9999;
-
-    function resize() { w = c.width = innerWidth; h = c.height = innerHeight; }
-
-    class P {
-        constructor() { this.r(); }
-        r() {
-            this.x = Math.random() * w; this.y = Math.random() * h;
-            this.vx = (Math.random() - .5) * .4; this.vy = (Math.random() - .5) * .4;
-            this.rad = Math.random() * 1.5 + .5; this.o = Math.random() * .5 + .1;
-        }
-        u() {
-            this.x += this.vx; this.y += this.vy;
-            const dx = this.x - mx, dy = this.y - my, d = Math.sqrt(dx * dx + dy * dy);
-            if (d < MR) { const f = (MR - d) / MR; this.vx += dx / d * f * .02; this.vy += dy / d * f * .02; }
-            this.vx *= .999; this.vy *= .999;
-            if (this.x < 0) this.x = w; if (this.x > w) this.x = 0;
-            if (this.y < 0) this.y = h; if (this.y > h) this.y = 0;
-        }
-        d() {
-            ctx.beginPath(); ctx.arc(this.x, this.y, this.rad, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(79,142,255,${this.o})`; ctx.fill();
-        }
-    }
-
-    function create() { pts = []; for (let i = 0; i < N; i++) pts.push(new P()); }
-
-    function lines() {
-        for (let i = 0; i < pts.length; i++)
-            for (let j = i + 1; j < pts.length; j++) {
-                const dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, d = Math.sqrt(dx * dx + dy * dy);
-                if (d < DIST) {
-                    ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y);
-                    ctx.strokeStyle = `rgba(79,142,255,${(1 - d / DIST) * .15})`; ctx.lineWidth = .5; ctx.stroke();
-                }
-            }
-    }
-
-    function loop() {
-        ctx.clearRect(0, 0, w, h);
-        pts.forEach(p => { p.u(); p.d(); });
-        lines();
-        requestAnimationFrame(loop);
-    }
-
-    addEventListener('resize', resize);
-    addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-    resize(); create(); loop();
-}
 
 /* ---- Tile Reveal ---- */
 function initTiles() {
