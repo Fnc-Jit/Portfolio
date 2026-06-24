@@ -22,7 +22,7 @@ A modern, dark-themed developer portfolio built with vanilla HTML, CSS, and Java
 | Tile | Description |
 |------|-------------|
 | **About Me** | Bio, skills, stats |
-| **Projects** | 7 projects with GitHub links & live demos |
+| **Projects** | 14 projects with GitHub links & live demos |
 | **Certifications** | Cisco, NIIT, IBM, Google credentials |
 | **Research** | Published BCI research paper (ICCI 2026) |
 | **Hackathons** | UiPath Agent Hack, RIFT '26, Replit Vibe |
