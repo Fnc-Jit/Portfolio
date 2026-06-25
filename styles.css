@@ -1346,6 +1346,12 @@ body.light .hero::before {
     border: 1px solid rgba(99, 102, 241, .2)
 }
 
+.blog-cat-xai {
+    background: rgba(16, 185, 129, .12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, .2)
+}
+
 .blog-card h3 {
     font-size: 1.15rem;
     font-weight: 700;
